@@ -1,5 +1,6 @@
 import { adsConversionEventRelations } from "./ads-conversion-event"
 import { adsConversionRuleRelations } from "./ads-conversion-rule"
+import { agentSipPresenceRelations } from "./agent-sip-presence"
 import { aiAgentRelations } from "./ai-agent"
 import { aiConversationSourceRelations } from "./ai-conversation-source"
 import { aiEmbeddingRelations } from "./ai-embedding"
@@ -133,15 +134,19 @@ import { triggerStatsRelations } from "./trigger-stats"
 import { userRelations } from "./user"
 import { userDeviceTokenRelations } from "./user-device-token"
 import { userPersistentMenuRelations } from "./user-persistent-menu"
+import { userSoftphoneCredentialRelations } from "./user-softphone-credential"
 import { webhookRelations } from "./webhook"
 import { webhookExecutionRelations } from "./webhook-execution"
 import { whatsappBusinessAccountRelations } from "./whatsapp-business-account"
+import { whatsappCallRelations } from "./whatsapp-call"
+import { whatsappCallPermissionRelations } from "./whatsapp-call-permission"
 import { whatsappFlowRelations } from "./whatsapp-flow"
 import { whatsappMessageTemplateRelations } from "./whatsapp-message-template"
 import { whatsappSignupSessionRelations } from "./whatsapp-signup-session"
 import { workspaceRelations } from "./workspace"
 import { workspaceApiTokenRelations } from "./workspace-api-token"
 import { workspaceMemberRelations } from "./workspace-member"
+import { workspaceSipNodeRelations } from "./workspace-sip-node"
 
 export const relations = {
   ...integrationApiRelations,
@@ -212,6 +217,8 @@ export const relations = {
   ...auditLogRelations,
   ...sessionRelations,
   ...spreadsheetRelations,
+  ...whatsappCallRelations,
+  ...whatsappCallPermissionRelations,
   ...whatsappFlowRelations,
   ...whatsappBusinessAccountRelations,
   ...integrationWhatsappRelations,
@@ -286,4 +293,7 @@ export const relations = {
   ...minigameRelations,
   ...minigameContactRelations,
   ...minigamePlayRelations,
+  ...agentSipPresenceRelations,
+  ...userSoftphoneCredentialRelations,
+  ...workspaceSipNodeRelations,
 }
